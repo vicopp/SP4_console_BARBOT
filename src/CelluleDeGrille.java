@@ -9,4 +9,8 @@
  */
 public class CelluleDeGrille {
     
+    private boolean jetonCourant;
+    
+    
+    
 }
