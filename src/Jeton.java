@@ -9,4 +9,20 @@
  */
 public class Jeton {
     
+    private String couleur;
+    
+    public Jeton (String Couleur) {
+        couleur = Couleur;
+    }
+
+    public String lireCouleur() {
+        return couleur;
+    }
+
+    @Override
+    public String toString() {
+        return "Jeton{" + "couleur=" + couleur + '}';
+    }
+       
+    
 }
