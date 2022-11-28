@@ -26,7 +26,15 @@ public class CelluleDeGrille {
         
     }
     
-    
+    public boolean presenceJeton() {
+        
+        if (jetonCourant == null) {
+            return false;
+            
+        } else {
+            return true;
+        }   
+    }
     
     
 }
