@@ -9,7 +9,11 @@
  */
 public class CelluleDeGrille {
     
-    private boolean jetonCourant;
+    private Jeton jetonCourant;
+    
+    private boolean avoirTrouNoir;
+    
+    private boolean avoirDesintegrateur;
     
     
     
