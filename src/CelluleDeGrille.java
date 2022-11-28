@@ -36,5 +36,19 @@ public class CelluleDeGrille {
         }   
     }
     
+    public boolean affecterJeton (Jeton jeton) {
+        if (jetonCourant == null) {
+            
+            jetonCourant = jeton;
+            
+            
+            
+            return true;
+            
+        } else {
+            System.out.println("La cellule est occupée");
+            return false;
+        }
+    }
     
 }
