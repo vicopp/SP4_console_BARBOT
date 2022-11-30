@@ -98,8 +98,66 @@ public class CelluleDeGrille {
         }
         
         
+    }
+    
+    
+    public Jeton recupererJeton() {
+        
+        Jeton StockJetonCourant;
+        StockJetonCourant = jetonCourant;
+        jetonCourant = null;
+        
+        return StockJetonCourant;
+    }
+    
+    
+    public void supprimerJeton() {
+       
+        jetonCourant = null;
         
     }
+    
+    public boolean presenceDesintegrateur() {
+        
+        return avoirDesintegrateur;
+      
+    }
+    
+    public void placerDesintegrateur() {
+        
+        avoirDesintegrateur = true;
+        
+    }
+    
+    public void supprimerDesintegrateur () {
+        
+        avoirDesintegrateur = false;
+       
+    }
+    
+    
+    public boolean activerTrouNoir() {
+        
+        if (avoirTrouNoir == true) {
+            
+            jetonCourant = null;
+            
+            avoirTrouNoir = false;
+            
+            System.out.println("activation d'un trou noir");
+            return true; 
+            
+            
+        } else {
+            System.out.println ("absence de trou noir");
+            
+            return false;
+        }
+        
+        
+    }
+    
+    
     
     
 }    
