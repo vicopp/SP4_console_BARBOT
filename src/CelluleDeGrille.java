@@ -66,4 +66,43 @@ public class CelluleDeGrille {
         
     }
     
-}
+    public boolean placerTrouNoir () {
+        
+        if (avoirTrouNoir == false ) {
+            
+            avoirTrouNoir = true;
+            
+            System.out.println("Placement trou noir");
+            
+            return true;
+        }
+        return false;
+    }
+    
+    public void supprimerTrouNoir () { 
+        
+        avoirTrouNoir = false;
+    
+    
+    }
+    
+    public boolean presenceTrouNoir () {
+        
+        if (avoirTrouNoir == false) {
+            
+            return false;
+            
+        } else {
+            
+            return true;
+        }
+        
+        
+        
+    }
+    
+    
+}    
+            
+            
+       
