@@ -51,4 +51,19 @@ public class CelluleDeGrille {
         }
     }
     
+    
+    public String lireCouleurDuJeton() {
+        
+        if (jetonCourant == null) {
+            
+            return "vide";
+            
+            
+        } else  { 
+            return jetonCourant.lireCouleur();
+            
+        }
+        
+    }
+    
 }
