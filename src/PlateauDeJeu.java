@@ -74,6 +74,8 @@ public class PlateauDeJeu {
         return grille [ligne][colonne].presenceJeton();
         
     }
-    
+    public String lireCouleurDuJeton(int ligne, int colonne) {
+        return grille [ligne][colonne].lireCouleurDuJeton();
+    }
     
 }
