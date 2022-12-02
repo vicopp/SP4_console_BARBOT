@@ -33,6 +33,20 @@ public class PlateauDeJeu {
         
     }
     
-    
+    public boolean grilleRemplie() {
+        
+        for (int i=0; i<6; i++) {
+            
+            for (int j = 0; j<7; j++) {
+            if (grille [i][j].jetonCourant == null) {
+                return false;
+            }
+            
+        }
+            
+        }
+        return true;
+        
+    }
     
 }
