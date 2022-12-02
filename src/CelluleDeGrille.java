@@ -9,7 +9,7 @@
  */
 public class CelluleDeGrille {
     
-    private Jeton jetonCourant;
+    public Jeton jetonCourant;
     
     private boolean avoirTrouNoir;
     
@@ -41,6 +41,7 @@ public class CelluleDeGrille {
             
             jetonCourant = jeton;
             
+            activerTrouNoir();
             
             
             return true;
@@ -157,6 +158,24 @@ public class CelluleDeGrille {
         
     }
     
+    
+    @Override
+    public String toString (){
+        
+        if (lireCouleurDuJeton() == "jaune") {
+            return "J";
+        }
+        if (lireCouleurDuJeton() == "rouge") {
+            return "R";
+        }
+        if (avoirDesintegrateur) {
+            System.out.print ("D");
+        } else if (avoirTrouNoir) {
+            System.out.print("@");
+        }
+        
+        return ".";
+    }
     
     
     
