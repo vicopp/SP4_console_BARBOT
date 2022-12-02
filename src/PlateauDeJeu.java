@@ -21,5 +21,18 @@ public class PlateauDeJeu {
         }
         
     }
+    public int ajouterJetonDansColonne(Jeton jeton, int colonne) {
+        for (int i=0 ; i<6 ; i++) {
+            if (grille[i][colonne].presenceJeton() != true) {
+            
+            grille[i][colonne].affecterJeton(jeton);
+            return i;
+            }
+        }
+        return 0;
+        
+    }
+    
+    
     
 }
