@@ -17,6 +17,13 @@ public class Joueur {
     private int nombreDesintegrateurs;
     
     
+    public Joueur (String nom) {
+        nom = nom;
+        nombreDesintegrateurs = 0;
+        
+    }
+    
+    
     
     
 }
