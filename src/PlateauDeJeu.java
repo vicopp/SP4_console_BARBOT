@@ -153,4 +153,18 @@ public class PlateauDeJeu {
         
     }
     
+    public boolean colonneremplie(int colonne) {
+        
+        return grille[5][colonne].lireCouleurDuJeton() != "vide";
+        
+    }
+    
+    public boolean presenceTrouNoir(int ligne, int colonne) {
+        
+        return grille[ligne][colonne].presenceTrouNoir();   
+    }
+    
+    
+    
+    
 }
