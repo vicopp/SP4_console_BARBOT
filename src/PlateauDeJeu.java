@@ -78,4 +78,66 @@ public class PlateauDeJeu {
         return grille [ligne][colonne].lireCouleurDuJeton();
     }
     
+    
+    public boolean etreGagnantePourCouleur(String couleur) {
+        
+        int compteur = 0;
+        // ligne
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (couleur == grille[i][j].lireCouleurDuJeton()
+                        && couleur == grille[i][j + 1].lireCouleurDuJeton()
+                        && couleur == grille[i][j + 2].lireCouleurDuJeton()
+                        && couleur == grille[i][j + 3].lireCouleurDuJeton()) {
+                    
+
+                    return true; //ligne gagnante
+
+                }
+
+            }
+
+        }
+        //colonne
+        for (int j = 0; j < 7; j++) {
+            for (int i = 0; i < 3; i++) {
+                if (couleur == grille[i][j].lireCouleurDuJeton()
+                        && couleur == grille[i + 1][j].lireCouleurDuJeton()
+                        && couleur == grille[i + 2][j].lireCouleurDuJeton()
+                        && couleur == grille[i + 3][j].lireCouleurDuJeton()) {
+                    
+                    return true; //colonne gagnante
+                }
+            }
+        }
+
+        //diagonnale montante
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (couleur == grille[i][j].lireCouleurDuJeton()
+                        && couleur == grille[i + 1][j + 1].lireCouleurDuJeton()
+                        && couleur == grille[i + 2][j + 2].lireCouleurDuJeton()
+                        && couleur == grille[i + 3][j + 3].lireCouleurDuJeton()) {
+                    return true;
+                }
+            }
+
+        }
+        //diagonale descandante
+        for (int i = 3; i < 6; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (couleur == grille[i][j].lireCouleurDuJeton()
+                        && couleur == grille[i - 1][j + 1].lireCouleurDuJeton()
+                        && couleur == grille[i - 2][j + 2].lireCouleurDuJeton()
+                        && couleur == grille[i - 3][j + 3].lireCouleurDuJeton()) {
+                    return true;
+                }
+            }
+
+        }
+        return false;
+    }
+
+    
+    
 }
