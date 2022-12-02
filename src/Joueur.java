@@ -22,7 +22,18 @@ public class Joueur {
         nombreDesintegrateurs = 0;
         
     }
+    public void affecterCouleur(String couleur) {
+        
+        couleur = couleur;
+        
+    }
     
+    
+    public int nombreDeJetons() {
+        return reserveJetons.size();
+    
+        
+    }
     
     
     
