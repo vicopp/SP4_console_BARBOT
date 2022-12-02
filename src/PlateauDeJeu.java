@@ -153,7 +153,7 @@ public class PlateauDeJeu {
         
     }
     
-    public boolean colonneremplie(int colonne) {
+    public boolean colonneRemplie(int colonne) {
         
         return grille[5][colonne].lireCouleurDuJeton() != "vide";
         
@@ -165,6 +165,13 @@ public class PlateauDeJeu {
     }
     
     
+    public void placerTrouNoir(int ligne, int colonne) {
+        grille [ligne][colonne].placerTrouNoir();
+    }
     
+    public void supprimerTrouNoir(int ligne, int colonne) {
+        grille [ligne][colonne].supprimerTrouNoir();
+        
+    }
     
 }
