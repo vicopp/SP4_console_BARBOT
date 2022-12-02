@@ -138,6 +138,19 @@ public class PlateauDeJeu {
         return false;
     }
 
-    
+    public void tasserColonne(int colonne) {
+        for (int i=5; i>=1; i--) {
+            
+            if (grille[i][colonne].jetonCourant == null) {
+                
+                grille[i][colonne].jetonCourant = grille[i-1][colonne].jetonCourant;
+                
+                grille[i-1][colonne].jetonCourant = null;
+                
+            }
+            
+        }
+        
+    }
     
 }
