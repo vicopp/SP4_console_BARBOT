@@ -45,11 +45,14 @@ public class Joueur {
         Jeton temp = reserveJetons.remove(0);
         
         return temp;        
-        
-        
     }
     
+    public void obtenirDesintegrateur() {
+        nombreDesintegrateurs = nombreDesintegrateurs + 1;
+    }
     
-    
+    public void utiliserDesintegrateur() {
+        nombreDesintegrateurs = nombreDesintegrateurs - 1;
+    }
     
 }   
