@@ -35,11 +35,21 @@ public class Joueur {
         
     }
     
-    
-    
-}
-    
-    
-    
+    public void ajouterJeton(Jeton nouvJeton) {
         
-       
+        reserveJetons.add(nouvJeton);
+        
+    }
+    
+    public Jeton jouerJeton() {
+        Jeton temp = reserveJetons.remove(0);
+        
+        return temp;        
+        
+        
+    }
+    
+    
+    
+    
+}   
