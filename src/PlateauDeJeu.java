@@ -174,4 +174,20 @@ public class PlateauDeJeu {
         
     }
     
+    
+    public void placerDesintegrateur(int ligne, int colonne) {
+        grille [ligne][colonne].placerDesintegrateur();
+    
+    }
+    
+    
+    public void supprimerDesintegrateur(int ligne, int colonne) {
+        grille [ligne][colonne].supprimerDesintegrateur();
+    }
+    
+    
+    
+    public boolean presenceDesintegrateur(int ligne, int colonne) {
+        return grille [ligne][colonne].presenceDesintegrateur();   
+    }
 }
