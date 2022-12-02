@@ -69,4 +69,11 @@ public class PlateauDeJeu {
         
     }
     
+    public boolean presenceJeton(int ligne, int colonne) {
+        
+        return grille [ligne][colonne].presenceJeton();
+        
+    }
+    
+    
 }
