@@ -190,4 +190,19 @@ public class PlateauDeJeu {
     public boolean presenceDesintegrateur(int ligne, int colonne) {
         return grille [ligne][colonne].presenceDesintegrateur();   
     }
+    
+    
+    public void supprimerJeton (int ligne, int colonne) {
+        
+        grille[ligne][colonne].supprimerJeton();
+        
+    }
+    
+    public Jeton recupererJeton(int ligne, int colonne) {
+        
+        return grille [ligne][colonne].recupererJeton();
+        
+    }
+    
+    
 }
