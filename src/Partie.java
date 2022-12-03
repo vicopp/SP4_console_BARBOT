@@ -20,9 +20,33 @@ public class Partie {
         
         ListeJoueurs[0] = joueur1;
         ListeJoueurs[1] = joueur2;
-        joueurCourant = null;
+        
         
     }
+    
+    
+    public void attriberCouleursAuxJoueurs () {
+        
+        Random r = new Random();
+        int n = r.nextInt(1);
+        if (n == 0) {
+            
+            ListeJoueurs[0].affecterCouleur("jaune");
+            ListeJoueurs[1].affecterCouleur("rouge");
+            
+        } else {
+            ListeJoueurs[0].affecterCouleur("rouge");
+            ListeJoueurs[1].affecterCouleur("jaune");
+            
+        }
+        
+        
+        
+        
+        
+        
+    }
+    
     
     
     
