@@ -165,6 +165,29 @@ public class Partie {
            
     }
    
+    public void manipDesintegrateur(){ 
+        
+            Scanner sc = new Scanner(System.in);
+            int ligne, colonne;
+            
+            do {
+                System.out.println("choisis la colonne ou tu veux desintegrer le jeton");
+                colonne = sc.nextInt();
+                
+                System.out.println("choisis la ligne ou tu veux desintegrer le jeton");
+                ligne = sc.nextInt();
+                
+                
+                if(joueurCourant.couleur == plateau.lireCouleurDuJeton(ligne,colonne)){
+                    System.out.println("desintegre un jeton de l'autre joueur");
+                }
+            } while (joueurCourant.couleur == plateau.lireCouleurDuJeton(ligne,colonne));
+            
+            joueurCourant.utiliserDesintegrateur();
+            plateau.supprimerJeton(ligne, colonne);
+            plateau.tasserColonne(colonne);
+    }
+   
     
 }
    
