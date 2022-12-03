@@ -123,8 +123,52 @@ public class Partie {
        
        return temp;
     }
+    
+    
+     public void placerJeton(String couleur,Joueur joueurCourant){
+         
+            int colonne;
+            
+            do {
+                Scanner sc = new Scanner(System.in);
+                
+                System.out.println("Choisis la colonne, comprise entre 0 et 6, dans laquelle tu veux placer ton jeton");
+                colonne = sc.nextInt(); 
+               
+                 if (colonne > 6) {
+                  System.out.println("chiffre trop grand");
+            
+    
+                } else if (plateau.colonneRemplie(colonne)) {
+                    System.out.println("deja remplie");
+                       
+                } else if (colonne < 0 ) {
+                System.out.println("chiffre trop petit");
+                }    
+            } while (colonne < 0 || colonne > 6 || plateau.colonneRemplie(colonne));
+           
+            int ligne = plateau.derniereL(colonne);
+            
+            if (plateau.presenceTrouNoir(ligne, colonne)){
+                plateau.supprimerJeton(ligne, colonne);
+                plateau.supprimerTrouNoir(ligne, colonne);
+            
+            } else if(plateau.presenceDesintegrateur(ligne, colonne)){
+                
+                joueurCourant.obtenirDesintegrateur();
+                plateau.supprimerDesintegrateur(ligne, colonne);
+                ligne = plateau.ajouterJetonDansColonne(joueurCourant.jouerJeton(), colonne); 
+                
+            } else {
+                ligne = plateau.ajouterJetonDansColonne(joueurCourant.jouerJeton(), colonne);
+            }
+           
+    }
    
-}   
+    
+}
+   
+ 
     
     
 
