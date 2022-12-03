@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;      
 
@@ -104,7 +105,29 @@ public class Partie {
     }
 
     
+    public Jeton prendreUnJeton(){
+       int ligne;
+       int colonne;
+       
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Dans quelle ligne souhaites tu prendre ton jeton ?");
+       ligne = sc.nextInt();
+       System.out.println("Dans quelle colonne souhaites tu prendre ton jeton ?");
+       colonne = sc.nextInt();
+       
+       
+       Jeton temp = plateau.recupererJeton(ligne, colonne);
+       
+       plateau.supprimerJeton(ligne, colonne);
+       plateau.tasserColonne(colonne);
+       
+       return temp;
+    }
+   
+}   
     
     
+
+
     
-}
+
