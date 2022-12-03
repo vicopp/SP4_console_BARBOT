@@ -4,6 +4,8 @@
  */
 package sp4_console_barbot;
 
+import java.util.Scanner;
+
 /**
  *
  * @author victor
@@ -17,6 +19,10 @@ public class SP4_console_BARBOT {
         // TODO code application logic here
         
            
+        
+        
+        
+        
         
     }
     

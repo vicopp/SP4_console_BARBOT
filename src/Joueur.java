@@ -11,8 +11,8 @@ import java.util.ArrayList;
  * @author victor
  */
 public class Joueur {
-    private String nom;
-    private String couleur;
+    public String nom;
+    public String couleur;
     private ArrayList <Jeton> reserveJetons = new ArrayList();
     private int nombreDesintegrateurs;
     

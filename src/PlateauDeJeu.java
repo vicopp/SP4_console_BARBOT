@@ -159,6 +159,16 @@ public class PlateauDeJeu {
         
     }
     
+    public int derniereL (int colonne) {
+        
+        for (int i = 0; i<6; i++) {
+            if (presenceJeton(i, colonne) == false) {
+                return i;
+            }
+        }
+        return 6;
+    }
+    
     public boolean presenceTrouNoir(int ligne, int colonne) {
         
         return grille[ligne][colonne].presenceTrouNoir();   
@@ -203,6 +213,7 @@ public class PlateauDeJeu {
         return grille [ligne][colonne].recupererJeton();
         
     }
+    
     
     
 }
