@@ -20,7 +20,7 @@ public class SP4_console_BARBOT {
         
            
         Joueur J1 = new Joueur  ("Line");
-        Joueur J2 = new Joueur  ("Vico");
+        Joueur J2 = new Joueur  ("Vicop");
      
         Partie partie = new Partie (J1,J2);
         partie.initialiserPartie();
