@@ -189,6 +189,59 @@ public class Partie {
     }
    
     
+    public void lancerPartie(){
+       Scanner sc =new Scanner(System.in);
+       int rep;
+        int cpt = 0;
+        while(plateau.etreGagnantePourCouleur(ListeJoueurs[0].couleur) == false && plateau.etreGagnantePourCouleur(ListeJoueurs[1].couleur) == false  && plateau.grilleRemplie() == false){
+            if(cpt%2==0){
+                joueurCourant= ListeJoueurs [0];
+                
+            } else {
+                
+                joueurCourant = ListeJoueurs[1];
+                
+            }
+            System.out.println("0>jouerjeton, 1>recuperer , 2>désintegrer");
+            rep = sc.nextInt();
+            switch(rep){
+                case 0:
+                    placerJeton(joueurCourant.couleur, joueurCourant);
+                    break;
+                case 1:
+                    prendreUnJeton();
+                    break;
+                case 2:
+                    manipDesintegrateur();
+                    break;
+            }
+            plateau.afficherGrilleSurConsole();
+        }
+        boolean v1 = plateau.etreGagnantePourCouleur(ListeJoueurs[0].couleur);
+        boolean v2 = plateau.etreGagnantePourCouleur(ListeJoueurs[1].couleur);
+        if(v1 && !v2){
+            System.out.println("j1 gagne");
+        }
+        if(v2 &&!v1){
+            System.out.println("j2 gagne");
+        }
+        if (v1 && v2){
+            if(ListeJoueurs[0] == joueurCourant){
+                System.out.println("j2 gagne");
+            }else{
+                System.out.println("j1 gagne");
+            }
+        } 
+        if (v1 && v2){
+            if(ListeJoueurs[1] == joueurCourant){
+                System.out.println("j1 gagne");
+            }else{
+                System.out.println("j2 gagne");
+            }
+        }
+    }    
+       
+    
 }
    
  
