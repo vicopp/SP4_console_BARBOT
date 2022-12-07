@@ -1,3 +1,5 @@
+package sp4_console_barbot;
+
 
 import java.util.ArrayList;
 
@@ -13,7 +15,7 @@ import java.util.ArrayList;
 public class Joueur {
     public String nom;
     public String couleur;
-    private ArrayList <Jeton> reserveJetons = new ArrayList();
+    private ArrayList <Jeton> reserveJetons = new ArrayList<>();
     private int nombreDesintegrateurs;
     
     
@@ -22,9 +24,9 @@ public class Joueur {
         nombreDesintegrateurs = 0;
         
     }
-    public void affecterCouleur(String couleur) {
+    public void affecterCouleur(String Couleur) {
         
-        couleur = couleur;
+        couleur = Couleur;
         
     }
     
@@ -42,7 +44,8 @@ public class Joueur {
     }
     
     public Jeton jouerJeton() {
-        Jeton temp = reserveJetons.remove(0);
+        Jeton temp = reserveJetons.get(0);
+        reserveJetons.remove(0);
         
         return temp;        
     }

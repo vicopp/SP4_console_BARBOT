@@ -1,3 +1,5 @@
+package sp4_console_barbot;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -73,7 +75,6 @@ public class CelluleDeGrille {
             
             avoirTrouNoir = true;
             
-            System.out.println("Placement trou noir");
             
             return true;
         }
@@ -162,23 +163,27 @@ public class CelluleDeGrille {
     @Override
     public String toString (){
         
+        String a= ".";
+        
         if (lireCouleurDuJeton() == "jaune") {
             return "J";
         }
         if (lireCouleurDuJeton() == "rouge") {
             return "R";
         }
-        if (avoirDesintegrateur) {
-            System.out.print ("D");
-        } else if (avoirTrouNoir) {
-            System.out.print("@");
+        if (avoirTrouNoir) {
+            a="@" ;
+            
+        } else if (avoirDesintegrateur) {
+            a="D";
+            ;
         }
-        
-        return ".";
+        else {
+             a=".";
+        }
+        return a;
     }
-    
-    
-    
+   
 }    
             
             

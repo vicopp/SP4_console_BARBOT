@@ -1,3 +1,5 @@
+package sp4_console_barbot;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -22,14 +24,9 @@ public class PlateauDeJeu {
         
     }
     public int ajouterJetonDansColonne(Jeton jeton, int colonne) {
-        for (int i=0 ; i<6 ; i++) {
-            if (grille[i][colonne].presenceJeton() != true) {
-            
-            grille[i][colonne].affecterJeton(jeton);
-            return i;
-            }
-        }
-        return 0;
+        int a= derniereL(colonne);
+        grille[a][colonne].affecterJeton(jeton);
+        return a;
         
     }
     
@@ -51,7 +48,7 @@ public class PlateauDeJeu {
     
     public void afficherGrilleSurConsole() {
         
-        for (int i = 0; i<6; i++) {
+        for (int i = 5; i>-1; i--) {
         
         for (int j =0 ; j<7 ; j++) {
             if (j==6) {
@@ -60,7 +57,7 @@ public class PlateauDeJeu {
                 
             } else {
                 
-                System.out.println(grille[i][j] + " ");
+                System.out.print(grille[i][j] + " ");
                 
             }
             
@@ -139,13 +136,13 @@ public class PlateauDeJeu {
     }
 
     public void tasserColonne(int colonne) {
-        for (int i=5; i>=1; i--) {
+        for (int i=0; i<5; i++) {
             
             if (grille[i][colonne].jetonCourant == null) {
                 
-                grille[i][colonne].jetonCourant = grille[i-1][colonne].jetonCourant;
+                grille[i][colonne].jetonCourant = grille[i+1][colonne].jetonCourant;
                 
-                grille[i-1][colonne].jetonCourant = null;
+                grille[i+1][colonne].jetonCourant = null;
                 
             }
             
@@ -160,13 +157,13 @@ public class PlateauDeJeu {
     }
     
     public int derniereL (int colonne) {
-        
+        int ligne = 0;
         for (int i = 0; i<6; i++) {
-            if (presenceJeton(i, colonne) == false) {
-                return i;
+            if (presenceJeton(i, colonne) == true) {
+                ligne +=1;
             }
         }
-        return 6;
+        return ligne;
     }
     
     public boolean presenceTrouNoir(int ligne, int colonne) {
