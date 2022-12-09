@@ -165,7 +165,7 @@ public class Partie {
     }
    
     public void manipDesintegrateur(){ 
-        
+        if (joueurCourant.getnombreDesintegrateur()!=0){
             Scanner sc = new Scanner(System.in);
             int ligne, colonne;
             
@@ -185,6 +185,9 @@ public class Partie {
             joueurCourant.utiliserDesintegrateur();
             plateau.supprimerJeton(ligne, colonne);
             plateau.tasserColonne(colonne);
+        } else {
+            System.out.println("vous n'avez pas de desintegrateurs");
+        }
     }
    
     

@@ -30,6 +30,10 @@ public class Joueur {
         
     }
     
+    public int getnombreDesintegrateur(){
+        return nombreDesintegrateurs;
+    }
+    
     
     public int nombreDeJetons() {
         return reserveJetons.size();
