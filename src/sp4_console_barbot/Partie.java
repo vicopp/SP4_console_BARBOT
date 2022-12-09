@@ -205,6 +205,7 @@ public class Partie {
                 cpt=cpt+1;
             }
             System.out.println("0>jouerjeton, 1>recuperer , 2>désintegrer");
+            // ajouter boucle pour ne pas sauter le tour de celui qui veut utiliser un desintertauer et qui n'en a pas
             rep = sc.nextInt();
             switch(rep){
                 case 0:
